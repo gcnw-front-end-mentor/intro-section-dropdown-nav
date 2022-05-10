@@ -15,20 +15,24 @@ body {
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    display: sticky;
     width: inherit;
     color: #686868;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     align-items: center;
+    z-index: 1;
     /* border: 5px solid lightblue; */
 }
 
 nav p {
     margin: 0px 20px;
+    cursor: pointer;
+    color: #686868;
+
 }
 
 #snapLogo {
@@ -38,6 +42,7 @@ nav p {
 .linkContainer {
     display: flex;
     align-items: center;
+
     /* border: 5px solid salmon; */
 }
 
@@ -48,34 +53,65 @@ nav p {
 }
 
 .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     font-family: Epilogue;
     font-size: 14px;
     font-weight: 500;
+    width: 80px;
+    cursor: pointer;
 }
 
 .menuContent {
     display: none;
     position: absolute;
-    z-index: 1;
+    background-color: #FAFAFA;
+
+}
+
+.features {
+    width: 153px;
+    height: 160px;
+}
+
+.company {
+    width: 116px;
+    height: 128px;
 }
 
 .menuContent a {
+    display: flex;
     text-decoration: none;
-    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 8px 15px;
+    cursor: pointer;
+    width: inherit;
 }
 
+/* .menuContent img {
+    margin: 0 15px;
+} */
+
 .dropMenu:hover .menuContent {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
 }
 
 .loginContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: inherit;
     width: 182px;
     height: 42px;
+    margin-right: 40px;
 }
 
 #registerButton {
@@ -90,11 +126,13 @@ nav p {
 
 main {
     display: flex;
+    position: relative;
     margin-top:67px;
     align-items: center;
     justify-content: center;
     height: auto;
     width: auto;
+    z-index: -1;
 }
 
 main h1 {
@@ -113,14 +151,34 @@ main p {
 .textContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 540px;
-    height: 400px;
+    height: 544px;
     margin-right: 125px;
 }
 
 #learnMore {
+    display: flex;
+    width: 163px;
+    height: 56px;
     background-color: black;
-    color:#FAFAFA;
     font-size: 18px;
     line-height: 28px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#learnMore p {
+    font-weight: 700;
+    letter-spacing: -0.25px;
+    color:#FAFAFA;
+}
+
+.partnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 478px;
+    height: 36px;
 }
