@@ -98,15 +98,6 @@ nav p {
     width: inherit;
 }
 
-/* .menuContent img {
-    margin: 0 15px;
-} */
-
-/* .dropMenu:hover .menuContent {
-
-
-} */
-
 .loginContainer {
     display: flex;
     justify-content: space-around;
@@ -114,6 +105,14 @@ nav p {
     width: 182px;
     height: 42px;
     margin-right: 40px;
+}
+
+.loginContainer p {
+    cursor: pointer;
+}
+
+#loginText:hover {
+    font-weight: 700;
 }
 
 #registerButton {
@@ -124,6 +123,12 @@ nav p {
     height: inherit;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+#registerButton:hover {
+    box-shadow: 0px 10px 40px rgba(108, 49, 210, 0.31);
+    font-weight: 700;
 }
 
 main {
@@ -164,17 +169,26 @@ main p {
     width: 163px;
     height: 56px;
     background-color: black;
+    color:#FAFAFA;
     font-size: 18px;
     line-height: 28px;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+#learnMore:hover {
+    color: black;
+    background-color:#FAFAFA;
+    border: 2px solid black;
+
 }
 
 #learnMore p {
     font-weight: 700;
     letter-spacing: -0.25px;
-    color:#FAFAFA;
+    color: inherit;
 }
 
 .partnerContainer {
