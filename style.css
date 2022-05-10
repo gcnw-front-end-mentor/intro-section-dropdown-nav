@@ -8,6 +8,8 @@
 
 body { 
     display: flex;
+    position: relative;
+    z-index: -10;
     flex-direction: column;
     background-color: #FAFAFA;
     font-family: Epilogue;
@@ -29,7 +31,7 @@ nav {
 }
 
 nav p {
-    margin: 0px 20px;
+    padding: 0px 20px;
     cursor: pointer;
     color: #686868;
 
@@ -69,15 +71,19 @@ nav p {
     display: none;
     position: absolute;
     background-color: #FAFAFA;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
 
 }
 
-.features {
+#features {
     width: 153px;
     height: 160px;
 }
 
-.company {
+#company {
     width: 116px;
     height: 128px;
 }
@@ -96,14 +102,10 @@ nav p {
     margin: 0 15px;
 } */
 
-.dropMenu:hover .menuContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: flex-start; */
-    border-radius: 10px;
-    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
-}
+/* .dropMenu:hover .menuContent {
+
+
+} */
 
 .loginContainer {
     display: flex;
