@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html {
+    font-size: 18px;
+}
+
 body { 
     display: flex;
     position: relative;
@@ -20,10 +24,10 @@ body {
 nav {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    width: 100vw;
+    /* justify-content: space-between; */
+    width: inherit;
     color: #686868;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 16px;
     align-items: center;
@@ -44,11 +48,12 @@ nav > p {
     margin: 0 40px;
 }
 
-#desktopLinkContainer {
+#linkContainer {
     display: flex;
     align-items: center;
+    width: inherit;
     justify-content: space-between;
-    width: 100%;
+
 }
 
 .navLinks {
@@ -121,8 +126,7 @@ nav > p {
 .loginContainer {
     display: flex;
     justify-content: space-around;
-    align-items: inherit;
-    align-self: flex-end;
+    align-items: center;
     width: 182px;
     height: 42px;
     margin-right: 40px;

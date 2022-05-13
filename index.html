@@ -10,43 +10,10 @@
     </head>
 
     <body id="bodyContainer">
-<!-- DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV-->
-
-        <nav class="desktopOnly">
-            <img id="snapLogo" src="./images/logo.svg" alt="snap logo" width="84" height="27">
-            <div id="desktopLinkContainer">
-                <div class="navLinks">
-                    <div class="dropMenu">
-                        <button id="featuresButton" class="menuButton"><p>Features</p><img id="featuresArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
-                        <div id="features" class="menuContent">
-                            <a href=""><img src="./images/icon-todo.svg" alt="to do list icon" width="14" height="16"><p>Todo List</p></a>
-                            <a href=""><img src="./images/icon-calendar.svg" alt="calendar icon" width="16" height="16"><p>Calendar</p></a>
-                            <a href=""><img src="./images/icon-reminders.svg" alt="reminder icon" width="12" height="16"><p>Reminders</p></a>
-                            <a href=""><img src="./images/icon-planning.svg" alt="planning icon" width="16" height="16"><p>Planning</p></a>
-                        </div>
-                    </div>
-                    <div class="dropMenu">
-                        <button id="companyButton" class="menuButton"><p>Company</p><img id="companyArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
-                        <div id="company" class="menuContent">
-                            <a href=""><p>History</p></a>
-                            <a href=""><p>Our Team</p></a>
-                            <a href=""><p>Blog</p></a>
-                        </div>
-                    </div>
-                    <a><p>Careers</p></a>
-                    <a><p>About</p></a>
-                </div>
-                <div class="loginContainer">
-                    <a><p id="loginText">Login</p></a>
-                    <div id="registerButton"><p>Register</p></div>
-                </div>
-            </div>
-        </nav>
-<!-- MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV-->
-        <nav class="mobileOnly">
-            <img id="snapLogo" src="./images/logo.svg" alt="snap logo" width="84" height="27">
-            <div id="mobileLinkContainer">
-                <img class=" closeMenuIcon" onclick=closeNav() src="./images/icon-close-menu.svg" alt="menu close symbol" width="24" height="24">  
+        <nav>
+            <img id="snapLogo" src="./images/logo.svg" alt="snap logo">
+            <div id="linkContainer">
+                <img class="mobileOnly closeMenuIcon" onclick=closeNav() src="./images/icon-close-menu.svg" alt="menu close symbol" width="24" height="24">  
                 <div class="navLinks">
                     <div class="dropMenu">
                         <button id="featuresButton" class="menuButton"><p>Features</p><img id="featuresArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
@@ -75,23 +42,22 @@
             </div>
             <img id="openMenuIcon" class="mobileOnly" onclick="openNav()" src="./images/icon-menu.svg" alt="menu open symbol" width="32" height="18">  
         </nav>
-
 <!-- MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY -->
-        <img id="mobileImage" class="mobileOnly" src="./images/image-hero-mobile.png" alt="man on laptop surrounded by fun graphics" width="375" height="281.25" />
+        <img id="mobileImage" class="mobileOnly" src="./images/image-hero-mobile.png" alt="man on laptop surrounded by fun graphics" />
         <main>
             <div class="textContainer">
                 <h1>Make remote work</h1>
                 <p>
-                    Get your team in sync, no matter your location.<br>
-                    Streamline processes, create team rituals, and<br>
+                    Get your team in sync, no matter your location.
+                    Streamline processes, create team rituals, and
                     watch productivity soar.
                 </p>
                 <div id="learnMore"><a><p>Learn More</p></a></div>
                 <div class="partnerContainer">
-                    <img src="./images/client-databiz.svg" alt="databiz logo" width="113" height="20">
-                    <img src="./images/client-audiophile.svg" alt="audiophile logo" width="73" height="36">
-                    <img src="./images/client-meet.svg" alt="meet logo" width="89" height="20">
-                    <img src="./images/client-maker.svg" alt="maker logo" width="82" height="24">
+                    <img src="./images/client-databiz.svg" alt="databiz logo" />
+                    <img src="./images/client-audiophile.svg" alt="audiophile logo" />
+                    <img src="./images/client-meet.svg" alt="meet logo" />
+                    <img src="./images/client-maker.svg" alt="maker logo" />
                 </div>
             </div>
             <img id="desktopImage" class="desktopOnly" src="./images/image-hero-desktop.png" alt="man on laptop surrounded by fun graphics" width="480" height="640">

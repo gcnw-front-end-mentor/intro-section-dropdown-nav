@@ -15,6 +15,7 @@ function changeArrow(selection){
     /* OPEN SELECTED MENU */
     if(currentArrow.includes('arrow-down')){   
         inputNode.getElementsByTagName('img')[0].src = './images/icon-arrow-up.svg';
+        console.log(target)
         target.style.display = '';
         target.style.height = '';
     }
@@ -29,17 +30,21 @@ function changeArrow(selection){
 /* DETECT CLICK LOCATION AND RESET MENUS IF CLICK IS NOT ON A MENU*/
 function bodyClick(selection){
     selection.preventDefault();
+    console.log(selection.target)
+
     if(!featuresButton.contains(selection.target) && !companyButton.contains(selection.target)){
     Array.from(document.getElementsByClassName('arrowImage')).forEach(element => element.src = './images/icon-arrow-down.svg');
+    Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.display = 'none');
+
     }
 }
 
 function openNav() {
-    document.getElementById('mobileLinkContainer').style.width = '240px';
+    document.getElementById('linkContainer').style.width = '50%';
 }
 
 function closeNav() {
-    document.getElementById('mobileLinkContainer').style.width = '0px';
+    document.getElementById('linkContainer').style.width = '0px';
 }
 
 featuresButton.addEventListener('click',changeArrow);
