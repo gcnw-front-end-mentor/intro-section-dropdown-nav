@@ -8,61 +8,85 @@
 
 body { 
     display: flex;
-    position: relative;
+    max-width: 375px;
     flex-direction: column;
     background-color: #FAFAFA;
     font-family: Epilogue;
     justify-content: center;
-    width: 100vw;
+    overflow: scroll;
 }
 
 nav {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100vw;
+    width: inherit;
     color: #686868;
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
     align-items: center;
-    z-index: 1;
     /* border: 5px solid lightblue; */
 }
 
+.navLinks {
+    display: flex;
+    width: 99px;
+    min-height: 152px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 nav p {
-    margin: 30px 20px;
     cursor: pointer;
     color: #686868;
 
 }
 
 #snapLogo {
-    position: relative;
-    top: 2px;
-    left: 0;
-    margin: 0 40px;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+#openMenuIcon {
+    position: absolute;
+    top: 25px;
+    right: 16px;
 }
 
 #linkContainer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    padding-top: 60px;
+    transition: 0.5s;
 }
 
-.navLinks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#linkContainer > * {
+    margin-bottom: 32px;
+}
 
-    /* border: 5px solid salmon; */
+
+#linkContainer .closeMenuIcon {
+    display: relative;
+    font-size: 36px;
+    margin-left: 196px;
 }
 
 .dropMenu {
     position: relative;
-    display: inline-block;
-    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
 }
 
 .menuButton {
@@ -75,28 +99,31 @@ nav p {
     font-size: 14px;
     font-weight: 500;
     width: 80px;
+    z-index: 0;
     cursor: pointer;
 }
 
 .menuContent {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #FAFAFA;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
-
 }
 
 #features {
-    width: 153px;
-    height: 160px;
+    display: inherit;
+    width: 119px;
+    transition: 0.5s;
+    height: 152px;
 }
 
 #company {
-    width: 116px;
-    height: 128px;
+    display: inherit;
+    width: 76px;
+    transition: 0.5s;
+    height: 110px;
 }
 
 .menuContent a {
@@ -109,14 +136,18 @@ nav p {
     width: inherit;
 }
 
+/* .menuContent * {
+    display: none;
+} */
+
 .loginContainer {
     display: flex;
+    position: relative;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: inherit;
-    align-self: flex-end;
-    width: 182px;
-    height: 42px;
-    margin-right: 40px;
+    align-items: center;
+    width: 195px;
+    height: 74px;
 }
 
 .loginContainer p {
@@ -131,8 +162,8 @@ nav p {
     display: flex;
     border: black solid 1.5px;
     border-radius: 14px;
-    width: 104px;
-    height: inherit;
+    width: inherit;
+    height: 42px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -143,37 +174,47 @@ nav p {
     font-weight: 700;
 }
 
+#mobileImage {
+    display: flex;
+    width: 375px;
+    height: 281.25;
+    background-size: auto;
+    margin-top: 75px;
+}
+
 main {
     display: flex;
+    flex-direction: column;
     position: relative;
-    margin-top:67px;
     align-items: center;
     justify-content: center;
-    height: auto;
-    width: auto;
-    z-index: -1;
+    height: 208px;
+    width: 373px;
 }
 
 main h1 {
     color: black;
-    font-size: 80px;
-    line-height: 80px;
-    letter-spacing: -1.11px;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.5px;
 }
 
 main p {
     color: #686868;
-    font-size: 18px;
-    line-height: 28px;
+    text-align: center;
+    width: auto;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 540px;
-    height: 544px;
-    margin-right: 125px;
+    align-items: center;
+    /* width: 343px;
+    height: 78px; */
+
 }
 
 #learnMore {
@@ -207,10 +248,10 @@ main p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 478px;
-    height: 36px;
+    width: 343px;
+    height: 26px;
 }
 
-.mobileOnly {
+.desktopOnly {
     display: none;
 }
