@@ -3,17 +3,17 @@
     margin: 0; 
     padding: 0;
     font-size: 15px;
+    max-width: 375px;
     box-sizing: border-box;
 }
 
 body { 
     display: flex;
-    max-width: 375px;
+    height: auto;
     flex-direction: column;
     background-color: #FAFAFA;
     font-family: Epilogue;
     justify-content: center;
-    overflow: scroll;
 }
 
 nav {
@@ -27,7 +27,6 @@ nav {
     font-weight: 500;
     line-height: 16px;
     align-items: center;
-    /* border: 5px solid lightblue; */
 }
 
 .navLinks {
@@ -57,7 +56,7 @@ nav p {
     right: 16px;
 }
 
-#linkContainer {
+#mobileLinkContainer {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -71,12 +70,12 @@ nav p {
     transition: 0.5s;
 }
 
-#linkContainer > * {
+#mobileLinkContainer > * {
     margin-bottom: 32px;
 }
 
 
-#linkContainer .closeMenuIcon {
+#mobileLinkContainer .closeMenuIcon {
     display: relative;
     font-size: 36px;
     margin-left: 196px;
@@ -86,7 +85,6 @@ nav p {
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: 3;
 }
 
 .menuButton {
@@ -99,7 +97,6 @@ nav p {
     font-size: 14px;
     font-weight: 500;
     width: 80px;
-    z-index: 0;
     cursor: pointer;
 }
 
@@ -136,10 +133,6 @@ nav p {
     width: inherit;
 }
 
-/* .menuContent * {
-    display: none;
-} */
-
 .loginContainer {
     display: flex;
     position: relative;
@@ -175,6 +168,7 @@ nav p {
 }
 
 #mobileImage {
+    position: relative;
     display: flex;
     width: 375px;
     height: 281.25;
@@ -185,10 +179,9 @@ nav p {
 main {
     display: flex;
     flex-direction: column;
-    position: relative;
     align-items: center;
     justify-content: center;
-    height: 208px;
+    height: fit-content;
     width: 373px;
 }
 
@@ -197,14 +190,16 @@ main h1 {
     font-size: 36px;
     line-height: 42px;
     letter-spacing: -0.5px;
+    padding-top: 48px;
 }
 
 main p {
     color: #686868;
     text-align: center;
-    width: auto;
-    font-size: 16px;
+    width: 100%;
+    font-size: 15px;
     line-height: 26px;
+    padding: 24px 0;
 }
 
 .textContainer {
@@ -212,8 +207,8 @@ main p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* width: 343px;
-    height: 78px; */
+    width: 100%;
+    height: auto; 
 
 }
 
@@ -229,6 +224,7 @@ main p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
 }
 
 #learnMore:hover {
@@ -250,6 +246,7 @@ main p {
     justify-content: space-between;
     width: 343px;
     height: 26px;
+    padding: 50px 0;
 }
 
 .desktopOnly {

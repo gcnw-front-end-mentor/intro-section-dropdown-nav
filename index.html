@@ -2,16 +2,51 @@
 <html lang="en-US">
     <head>
         <title>FEM: Intro Section with dropdown navigation</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" media="screen and (min-device-width: 376px)" href="./style.css" />
+        <link rel="stylesheet" media="screen and (max-device-width: 375px)" href="./mobile-style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
     </head>
+
     <body id="bodyContainer">
-        <nav>
+<!-- DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV DESKTOP NAV-->
+
+        <nav class="desktopOnly">
             <img id="snapLogo" src="./images/logo.svg" alt="snap logo" width="84" height="27">
-            <div id="linkContainer">
-                <img class="mobileOnly closeMenuIcon" onclick=closeNav() src="./images/icon-close-menu.svg" alt="menu close symbol" width="24" height="24">  
+            <div id="desktopLinkContainer">
+                <div class="navLinks">
+                    <div class="dropMenu">
+                        <button id="featuresButton" class="menuButton"><p>Features</p><img id="featuresArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
+                        <div id="features" class="menuContent">
+                            <a href=""><img src="./images/icon-todo.svg" alt="to do list icon" width="14" height="16"><p>Todo List</p></a>
+                            <a href=""><img src="./images/icon-calendar.svg" alt="calendar icon" width="16" height="16"><p>Calendar</p></a>
+                            <a href=""><img src="./images/icon-reminders.svg" alt="reminder icon" width="12" height="16"><p>Reminders</p></a>
+                            <a href=""><img src="./images/icon-planning.svg" alt="planning icon" width="16" height="16"><p>Planning</p></a>
+                        </div>
+                    </div>
+                    <div class="dropMenu">
+                        <button id="companyButton" class="menuButton"><p>Company</p><img id="companyArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
+                        <div id="company" class="menuContent">
+                            <a href=""><p>History</p></a>
+                            <a href=""><p>Our Team</p></a>
+                            <a href=""><p>Blog</p></a>
+                        </div>
+                    </div>
+                    <a><p>Careers</p></a>
+                    <a><p>About</p></a>
+                </div>
+                <div class="loginContainer">
+                    <a><p id="loginText">Login</p></a>
+                    <div id="registerButton"><p>Register</p></div>
+                </div>
+            </div>
+        </nav>
+<!-- MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV MOBILE NAV-->
+        <nav class="mobileOnly">
+            <img id="snapLogo" src="./images/logo.svg" alt="snap logo" width="84" height="27">
+            <div id="mobileLinkContainer">
+                <img class=" closeMenuIcon" onclick=closeNav() src="./images/icon-close-menu.svg" alt="menu close symbol" width="24" height="24">  
                 <div class="navLinks">
                     <div class="dropMenu">
                         <button id="featuresButton" class="menuButton"><p>Features</p><img id="featuresArrow" class="arrowImage" src="./images/icon-arrow-down.svg" width="8" height="4"></button>
@@ -40,6 +75,8 @@
             </div>
             <img id="openMenuIcon" class="mobileOnly" onclick="openNav()" src="./images/icon-menu.svg" alt="menu open symbol" width="32" height="18">  
         </nav>
+
+<!-- MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY MAIN BODY -->
         <img id="mobileImage" class="mobileOnly" src="./images/image-hero-mobile.png" alt="man on laptop surrounded by fun graphics" width="375" height="281.25" />
         <main>
             <div class="textContainer">
@@ -62,3 +99,4 @@
     </body>
     <script src="./script.js"></script>
 </html>
+

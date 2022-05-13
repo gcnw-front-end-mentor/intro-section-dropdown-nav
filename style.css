@@ -4,6 +4,7 @@
     padding: 0;
     font-size: 15px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body { 
@@ -27,14 +28,13 @@ nav {
     line-height: 16px;
     align-items: center;
     z-index: 1;
+    
     /* border: 5px solid lightblue; */
 }
 
-nav p {
+nav > p {
     margin: 30px 20px;
     cursor: pointer;
-    color: #686868;
-
 }
 
 #snapLogo {
@@ -44,7 +44,7 @@ nav p {
     margin: 0 40px;
 }
 
-#linkContainer {
+#desktopLinkContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,8 +55,13 @@ nav p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
 
-    /* border: 5px solid salmon; */
+.navLinks > * {
+    margin: 30px 20px;
+    color: #686868;
+    cursor: pointer;
 }
 
 .dropMenu {
@@ -70,6 +75,7 @@ nav p {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
+    color: #686868;
     border: none;
     font-family: Epilogue;
     font-size: 14px;
@@ -79,14 +85,14 @@ nav p {
 }
 
 .menuContent {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
     background-color: #FAFAFA;
-    flex-direction: column;
-    justify-content: center;
+    z-index: 1;
     border-radius: 10px;
     box-shadow: 0px 10px 40px rgba(0,0,0,0.15);
-
 }
 
 #features {
@@ -102,11 +108,14 @@ nav p {
 .menuContent a {
     display: flex;
     text-decoration: none;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 14px;
     font-weight: 500;
-    margin: 8px 15px;
+    margin: 0px 15px;
     cursor: pointer;
     width: inherit;
+    height: auto;
 }
 
 .loginContainer {

@@ -15,15 +15,14 @@ function changeArrow(selection){
     /* OPEN SELECTED MENU */
     if(currentArrow.includes('arrow-down')){   
         inputNode.getElementsByTagName('img')[0].src = './images/icon-arrow-up.svg';
-        Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.display = 'flex');
-        Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.height = '')
+        target.style.display = '';
+        target.style.height = '';
     }
     /* CLOSE SELECTED MENU */
     else if (currentArrow.includes('arrow-up')){
         inputNode.getElementsByTagName('img')[0].src = './images/icon-arrow-down.svg';
-        Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.display = 'none');
-        Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.height = '0px')
-
+        target.style.display = 'none';
+        target.style.height = '0';
     }
 }
 
@@ -36,11 +35,11 @@ function bodyClick(selection){
 }
 
 function openNav() {
-    document.getElementById('linkContainer').style.width = '240px';
+    document.getElementById('mobileLinkContainer').style.width = '240px';
 }
 
 function closeNav() {
-    document.getElementById('linkContainer').style.width = '0px';
+    document.getElementById('mobileLinkContainer').style.width = '0px';
 }
 
 featuresButton.addEventListener('click',changeArrow);
