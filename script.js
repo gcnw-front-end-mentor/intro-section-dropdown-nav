@@ -41,11 +41,15 @@ function bodyClick(selection){
 function openNav() {
     document.getElementById('linkContainer').style.width = '65%';
     document.getElementById('linkContainer').style.display = 'flex';
+    document.getElementById('darkeningOverlay').style.opacity = '0.75';
+
 }
 
 function closeNav() {
     document.getElementById('linkContainer').style.width = '';
     document.getElementById('linkContainer').style.display = '';
+    document.getElementById('darkeningOverlay').style.opacity = '';
+
 
 }
 
