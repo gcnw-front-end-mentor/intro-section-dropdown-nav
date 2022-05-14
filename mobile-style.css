@@ -64,23 +64,24 @@ nav p {
 }
 
 #linkContainer {
-    display: flex;
+    display: none;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 0;
-    position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
     background-color: #FAFAFA;
     padding-top: 4rem;
-    transition: 0.5s;
+    transition: 3s;
 }
 
 #linkContainer * {
     margin-bottom: 2rem;
     font-size: 3rem;
+    text-decoration: none;
 }
 
 
@@ -88,6 +89,8 @@ nav p {
     display: relative;
     font-size: 3rem;
     margin-left: 12rem;
+    height: 4rem;
+    width:auto;
 }
 
 .dropMenu {
@@ -117,9 +120,25 @@ nav p {
     border-radius: 10px;
 }
 
+.menuContent a {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    width: fit-content;
+    justify-content: flex-start;
+}
+
+.menuContent img {
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+}
+
+
 #features {
     transition: 0.5s;
     height: 152px;
+    width: 100%;
 }
 
 #company {
@@ -127,10 +146,9 @@ nav p {
     height: 110px;
 }
 
-.menuContent a {
-    display: flex;
+.menuContent p {
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 2rem;
     font-weight: 500;
     /* margin: 0.5rem 1rem; */
     cursor: pointer;

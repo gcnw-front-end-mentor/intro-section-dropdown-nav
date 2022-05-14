@@ -19,6 +19,7 @@ body {
     font-family: Epilogue;
     justify-content: center;
     width: 100vw;
+    z-index: -1;
 }
 
 nav {
@@ -201,6 +202,7 @@ main p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 2;
 }
 
 #learnMore:hover {

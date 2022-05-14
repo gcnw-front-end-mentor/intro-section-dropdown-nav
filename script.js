@@ -2,7 +2,6 @@ const featuresButton = document.getElementById('featuresButton');
 const companyButton = document.getElementById('companyButton');
 Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.display = 'none');
 Array.from(document.getElementsByClassName('menuContent')).forEach(element => element.style.height = '0');
-
 function changeArrow(selection){
     const inputNode = selection.currentTarget;
     const target = inputNode.parentNode.getElementsByTagName('div')[0];
@@ -41,10 +40,12 @@ function bodyClick(selection){
 
 function openNav() {
     document.getElementById('linkContainer').style.width = '50%';
+    document.getElementById('linkContainer').style.display = 'flex';
 }
 
 function closeNav() {
-    document.getElementById('linkContainer').style.width = '0px';
+    document.getElementById('linkContainer').style.width = '';
+    document.getElementById('linkContainer').style.display = '';
 }
 
 featuresButton.addEventListener('click',changeArrow);
