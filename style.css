@@ -90,6 +90,12 @@ nav > p {
     cursor: pointer;
 }
 
+.menuButton img {
+    height: 50%;
+    width: auto;
+    margin-left: 0.5rem;
+}
+
 .menuContent {
     display: flex;
     flex-direction: column;

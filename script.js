@@ -39,13 +39,14 @@ function bodyClick(selection){
 }
 
 function openNav() {
-    document.getElementById('linkContainer').style.width = '50%';
+    document.getElementById('linkContainer').style.width = '65%';
     document.getElementById('linkContainer').style.display = 'flex';
 }
 
 function closeNav() {
     document.getElementById('linkContainer').style.width = '';
     document.getElementById('linkContainer').style.display = '';
+
 }
 
 featuresButton.addEventListener('click',changeArrow);

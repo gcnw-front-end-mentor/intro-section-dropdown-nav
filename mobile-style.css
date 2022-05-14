@@ -23,11 +23,8 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     color: #686868;
-    font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1rem;
     align-items: center;
 }
 
@@ -36,13 +33,17 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.3rem;
-    /* margin-left: 1.5rem; */
+    height: auto;
+    margin-left: 1rem;
 }
 
 nav p {
     cursor: pointer;
     color: #686868;
+}
 
+.navLinks > * {
+    padding: 2rem;
 }
 
 #snapLogo {
@@ -67,7 +68,7 @@ nav p {
     display: none;
     position: fixed;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     width: 0;
     z-index: 2;
@@ -79,7 +80,6 @@ nav p {
 }
 
 #linkContainer * {
-    margin-bottom: 2rem;
     font-size: 3rem;
     text-decoration: none;
 }
@@ -88,45 +88,64 @@ nav p {
 #linkContainer .closeMenuIcon {
     display: relative;
     font-size: 3rem;
-    margin-left: 12rem;
+    margin-left: 80%;
     height: 4rem;
-    width:auto;
+    width: auto;
 }
 
 .dropMenu {
-    position: relative;
+    position: inherit;
     display: flex;
     flex-direction: column;
 }
 
 .menuButton {
     display: flex;
+    position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     font-family: Epilogue;
     font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
+    width: auto;
+}
+
+.menuButton img {
+    height: 50%;
+    width: auto;
+    margin-left: 2rem;
 }
 
 .menuContent {
     display: flex;
     position: relative;
-    background-color: #FAFAFA;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
+    z-index: 10;
 }
 
 .menuContent a {
+    position: inherit;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
     display: flex;
-    align-items: center;
-    height: 3rem;
-    width: fit-content;
-    justify-content: flex-start;
+    transition: 0.3s;
+    padding: 4rem;
+
+    background-color: #FAFAFA;
+  }
+  
+.menuContent p {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
 }
+
 
 .menuContent img {
     height: 100%;
@@ -137,21 +156,13 @@ nav p {
 
 #features {
     transition: 0.5s;
-    height: 152px;
+    height: auto;
     width: 100%;
 }
 
 #company {
     transition: 0.5s;
-    height: 110px;
-}
-
-.menuContent p {
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 500;
-    /* margin: 0.5rem 1rem; */
-    cursor: pointer;
+    height: auto;
 }
 
 .loginContainer {
@@ -161,11 +172,13 @@ nav p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5rem;
+    height: auto;
+    margin-top: 3rem;
 }
 
 .loginContainer p {
     cursor: pointer;
+    margin: 1.875rem;
 }
 
 #loginText:hover {
@@ -175,11 +188,10 @@ nav p {
 #registerButton {
     display: flex;
     justify-content: center;
-    border: black solid 1.5px;
-    border-radius: 0.875rem;
+    border: 3px solid black;
+    border-radius: 1.5rem;
     cursor: pointer;
-    padding: 1rem;
-    width: 100%;
+    width: 90%;
 }
 
 #registerButton:hover {
@@ -191,7 +203,7 @@ nav p {
     position: relative;
     display: flex;
     background-size: auto;
-    margin-top: 4.75rem;
+    margin-top: 6rem;
 }
 
 main {
@@ -201,11 +213,12 @@ main {
     justify-content: center;
     width: 100%;
     text-align: center;
+    margin-top: 3rem;
 }
 
 main h1 {
     color: black;
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 42px;
     letter-spacing: -0.5px;
     padding: 4rem 0;
@@ -215,8 +228,10 @@ main p {
     color: #686868;
     text-align: center;
     font-size: 1.3rem;
-    line-height: 3rem;
+    line-height: 5rem;
     padding: 0 .4rem;
+    letter-spacing: 0.5px;
+
 
 }
 
@@ -234,7 +249,7 @@ main p {
 #learnMore {
     display: flex;
     width: auto;
-    height: 6rem;
+    height: auto;
     background-color: black;
     color:#FAFAFA;
     line-height: 28px;
@@ -242,7 +257,8 @@ main p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 3rem;
+    margin: 3rem 6rem 3rem 3rem;
+    
 
 }
 
@@ -258,16 +274,24 @@ main p {
     font-weight: 700;
     letter-spacing: -0.25px;
     color: inherit;
-    padding: 2rem;
+    padding: 1.5rem 4rem;
 }
 
 .partnerContainer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 2rem;
-    padding: 3rem 0;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 5rem;
+    margin-left: 1rem;
 }
+
+.partnerContainer img {
+    height: 3rem;
+    width: auto;
+    margin-right: 20px;
+}
+
 
 .desktopOnly {
     display: none;
